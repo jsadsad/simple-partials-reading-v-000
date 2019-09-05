@@ -817,3 +817,24 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 447ms (Views: 436.4ms | ActiveRecord: 0.7ms)
 
 
+Started POST "/posts" for 73.92.255.188 at 2019-09-05 05:57:21 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"puQTmhDIX/VYP7KUvoe4rtv3NKGKJ11Bs2hAP/yRE1MjSZstn72er997UGH9r/WefKv1+tGvwcM/aHoaeezVkA==", "title"=>"affaf", "description"=>"fafaf", "commit"=>"Submit Post"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "affaf"], ["description", "fafaf"], ["created_at", "2019-09-05 05:57:21.266443"], ["updated_at", "2019-09-05 05:57:21.266443"], ["author_id", 1]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.16.205:46448/posts/13
+Completed 302 Found in 13ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/posts/13" for 73.92.255.188 at 2019-09-05 05:57:21 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.9ms)
+
+
