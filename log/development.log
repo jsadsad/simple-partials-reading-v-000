@@ -809,3 +809,11 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/posts/new" for 73.92.255.188 at 2019-09-05 05:57:14 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.8ms)
+  Rendered posts/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 447ms (Views: 436.4ms | ActiveRecord: 0.7ms)
+
+
